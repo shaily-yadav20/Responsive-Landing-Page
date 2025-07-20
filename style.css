@@ -1,0 +1,121 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: dodgerblue;
+  }
+  
+  /* Section Styling */
+  .section {
+    padding: 100px 20px;
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  /* Default navbar style */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;  /* change this from white to transparent */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: #333; /* or any dark color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside scrolled navbar */
+.navbar.scrolled a {
+  color: white !important;
+}
+
+/* Normal links */
+.navbar a {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: dodgerblue;
+}
+
+
+
+
+/* Hero section with image and overlay */
+.hero {
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?technology,code');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Text on top of overlay */
+.hero .overlay {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
